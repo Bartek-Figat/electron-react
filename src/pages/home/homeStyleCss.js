@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../img/photo-1513828583688-c52646db42da.jfif';
+import logo from '../../img/photo-1513828583688-c52646db42da.jfif';
 
 export const loginStyleCss = {
   loginWrapper: {
