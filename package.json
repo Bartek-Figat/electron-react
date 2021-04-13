@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"SET BROWSER=none&&npm start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"SET BROWSER=none&&npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {
@@ -38,6 +40,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -55,6 +67,12 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "main.js",
   "devDependencies": {
+    "@storybook/addon-actions": "^6.2.7",
+    "@storybook/addon-essentials": "^6.2.7",
+    "@storybook/addon-links": "^6.2.7",
+    "@storybook/node-logger": "^6.2.7",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.7",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
     "concurrently": "^6.0.1",

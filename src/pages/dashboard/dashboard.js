@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { dashboardStyleCss } from './dashboardStyleCss';
+import { LinkPath } from '../../componets/Link/Link';
+import { List } from '../../componets/LiList/List';
+import { dashboardStyleCss } from './DashboardStyleCss';
+import './Dashboard.css';
 
 const {
   mainContainer,
   main: {
     mainLeft,
     mainRight,
-    sidebar: { top, bottom, list, itemList, link },
+    sidebar: { top, bottom, list },
   },
 } = dashboardStyleCss;
 
@@ -18,46 +20,37 @@ export const Admin = () => {
         <div className="main-side-bar__top" style={top}></div>
         <div className="main-side-bar__bottom" style={bottom}>
           <ul className="main-side__list" style={list}>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link1
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link2
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link3
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link4
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link5
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link6
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link7
-              </Link>
-            </li>
-            <li className="main-side-bar__list--item" style={itemList}>
-              <Link to="#" style={link}>
-                Link8
-              </Link>
-            </li>
+            <List>
+              <LinkPath to="#">Dashboard</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">Calendar</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">Mail</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">To-Do</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">File Manager</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">Contacts</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">Notes</LinkPath>
+            </List>
+
+            <List>
+              <LinkPath to="#">Chat</LinkPath>
+            </List>
           </ul>
         </div>
       </section>

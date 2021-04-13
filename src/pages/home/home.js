@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import * as yup from 'yup';
 import { Formik, Form, Field } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
-import { loginStyleCss, Button, LoginTitle } from './homeStyleCss';
+import { loginStyleCss, Button, LoginTitle } from './HomeStyleCss';
 import 'react-toastify/dist/ReactToastify.css';
 
 let schema = yup.object().shape({

@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import { Navigation } from '../navigation/path';
-import { Home } from '../pages/home/home';
-import { Admin } from '../pages/dashboard/dashboard';
+import { Home } from '../pages/home/Home';
+import { Admin } from '../pages/dashboard/Dashboard';
 
 export const Routing = () => (
   <Switch>
