@@ -1,5 +1,4 @@
 import React from 'react';
-import { BiTask, BiChat, BiHome } from 'react-icons/bi';
 import { CgNotes } from 'react-icons/cg';
 import { AiFillCalendar, AiOutlineMail, AiOutlineContacts } from 'react-icons/ai';
 
