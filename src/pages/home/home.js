@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import * as yup from 'yup';
 import { Formik, Form, Field } from 'formik';
-import { ToastContainer, toast } from 'react-toastify';
 import { loginStyleCss, Button, LoginTitle } from './HomeStyleCss';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,11 +26,8 @@ export const Home = () => {
             initialValues={{ email: '', password: '' }}
             validationSchema={schema}
             onSubmit={(values) => {
-              if (values) {
-                redirectAfterLogin();
-              } else {
-                redirectAfterError();
-              }
+              if (values) return redirectAfterLogin();
+              redirectAfterError();
             }}
           >
             {({ errors, isSubmitting }) => (

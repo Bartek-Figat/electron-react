@@ -8,17 +8,19 @@ export const dashboardStyleCss = {
       display: 'flex',
       flexDirection: 'column',
       flex: '0.15',
-      height: '100vh',
+      height: '100%',
+      backgroundColor: `#334052`,
     },
     sidebar: {
       top: {
         display: 'flex',
+        flex: '1',
         height: '20vh',
         backgroundColor: `#252f3e`,
       },
       bottom: {
         display: 'flex',
-        height: '80vh',
+        height: '100vh',
         backgroundColor: `#334052`,
       },
       list: {
@@ -32,7 +34,7 @@ export const dashboardStyleCss = {
       },
       itemList: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'right',
         alignSelf: 'center',
         width: '100%',
         height: '40px',
@@ -50,12 +52,26 @@ export const dashboardStyleCss = {
         alignSelf: 'center',
         color: 'rgb(222, 222, 222)',
         textDecorationLine: 'none',
+        fontSize: '1rem',
+      },
+      icon: {
+        color: '#fff',
+        display: 'flex',
+        alignSelf: 'center',
+        marginRight: '0.9rem',
+        fontSize: '1.4rem',
       },
     },
     mainRight: {
       display: 'flex',
+      width: '100%',
       flex: '0.85',
       height: '100vh',
+      mainConntent: {
+        display: 'flex',
+        flexDirection: 'column',
+        flex: '1',
+      },
     },
   },
 };

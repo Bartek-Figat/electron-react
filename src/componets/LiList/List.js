@@ -8,10 +8,8 @@ const {
   },
 } = dashboardStyleCss;
 
-export const List = ({ children, ...res }) => {
-  return (
-    <li className="main-side-bar__list--item" style={itemList} {...res}>
-      {children}
-    </li>
-  );
-};
+export const List = ({ children, ...res }) => (
+  <li className="main-side-bar__list--item" style={itemList} {...res}>
+    {children}
+  </li>
+);
